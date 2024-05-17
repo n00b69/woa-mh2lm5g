@@ -1,9 +1,9 @@
 > [!Warning]
 > This guide is W.I.P. DO NOT USE YET!
 
-<img align="right" src="https://github.com/n00b69/woa-flashlmdd/blob/main/flashlmdd.png" width="350" alt="Windows 11 running on flashlmdd">
+<img align="right" src="https://github.com/n00b69/woa-mh2lm5g/blob/main/mh2lm5g.png" width="350" alt="Windows 11 running on mh2lm5g">
 
-# Running Windows on the LG V50
+# Running Windows on the LG V50S
 [![telegram](https://img.shields.io/badge/chat-telegram-brightgreen.svg?logo=telegram&style=flat-square)](https://t.me/winong8x)
 
 ## ⚠️ Warning
