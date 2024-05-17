@@ -1,15 +1,15 @@
-<img align="right" src="https://github.com/n00b69/woa-flashlmdd/blob/main/flashlmdd.png" width="350" alt="Windows 11 running on flashlmdd">
+<img align="right" src="https://github.com/n00b69/woa-mh2lm5g/blob/main/mh2lm5g.png" width="350" alt="Windows 11 running on mh2lm5g">
 
-# Running Windows on the LG V50
+# Running Windows on the LG V50S
 
 ## Uninstalling Windows
 
 ### Prerequisites
 - [ADB & Fastboot](https://developer.android.com/studio/releases/platform-tools)
 
-- [Qfil](https://github.com/n00b69/woa-flashlmdd/releases/tag/Qfil)
+- [Qfil](https://github.com/n00b69/woa-mh2lm5g/releases/tag/Qfil)
 
-- [Parted script](https://github.com/n00b69/woa-flashlmdd/releases/download/Files/parted)
+- [Parted script](https://github.com/n00b69/woa-mh2lm5g/releases/download/Files/parted)
   
 - Any custom recovery
   
