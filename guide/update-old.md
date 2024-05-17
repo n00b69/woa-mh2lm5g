@@ -1,19 +1,19 @@
-<img align="right" src="https://github.com/n00b69/woa-flashlmdd/blob/main/flashlmdd.png" width="350" alt="Windows 11 running on flashlmdd">
+<img align="right" src="https://github.com/n00b69/woa-mh2lm5g/blob/main/mh2lm5g.png" width="350" alt="Windows 11 running on mh2lm5g">
 
-# Running Windows on the LG V50
+# Running Windows on the LG V50S
 
 ## Updating drivers (old method)
 
 ### Prerequisites
 - [ADB & Fastboot](https://developer.android.com/studio/releases/platform-tools)
 
-- [Qfil](https://github.com/n00b69/woa-flashlmdd/releases/tag/Qfil)
+- [Qfil](https://github.com/n00b69/woa-mh2lm5g/releases/tag/Qfil)
 
-- [Engineering ABL](https://github.com/n00b69/woa-flashlmdd/releases/download/Files/engabl_ab.bin)
+- [Engineering ABL](https://github.com/n00b69/woa-mh2lm5g/releases/download/Files/engabl_ab.bin)
   
-- [Drivers](https://github.com/n00b69/woa-flashlmdd/releases/tag/Drivers)
+- [Drivers](https://github.com/n00b69/woa-mh2lm5g/releases/tag/Drivers)
 
-- [Mass storage image](https://github.com/n00b69/woa-flashlmdd/releases/download/Files/msc.img)
+- [Mass storage image](https://github.com/n00b69/woa-mh2lm5g/releases/download/Files/msc.img)
 
 ### Boot to EDL
 - Open **Device Manager** on your PC
@@ -58,7 +58,7 @@ diskpart
 ```
 
 #### Select the phone's Windows volume
-> Use `list volume` to find it, it should be named **WINFLASH**
+> Use `list volume` to find it, it should be named **WINMH2LM5G**
 ```diskpart
 select volume <number>
 ```
@@ -76,7 +76,7 @@ exit
 ### Installing Drivers
 > Unpack the driver archive, then open the `OfflineUpdater.cmd` file
 
-> Enter the drive letter of `WINFLASH`, which should be X, then press enter
+> Enter the drive letter of `WINMH2LM5G`, which should be X, then press enter
 
 ### Reboot back to edl
 > To restore your original abl
