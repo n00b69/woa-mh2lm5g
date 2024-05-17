@@ -1,15 +1,15 @@
-<img align="right" src="https://github.com/n00b69/woa-flashlmdd/blob/main/flashlmdd.png" width="350" alt="Windows 11 running on flashlmdd">
+<img align="right" src="https://github.com/n00b69/woa-mh2lm5g/blob/main/mh2lm5g.png" width="350" alt="Windows 11 running on mh2lm5g">
 
-# Running Windows on the LG V50
+# Running Windows on the LG V50S
 
 ## Reinstalling Windows
 
 ### Prerequisites
 - [Windows on ARM image](https://worproject.com/esd)
   
-- [Drivers](https://github.com/n00b69/woa-flashlmdd/releases/tag/Drivers)
+- [Drivers](https://github.com/n00b69/woa-mh2lm5g/releases/tag/Drivers)
 
-- [Mass storage image](https://github.com/n00b69/woa-flashlmdd/releases/download/Files/msc.img)
+- [Mass storage image](https://github.com/n00b69/woa-mh2lm5g/releases/download/Files/msc.img)
 
 ### Reboot to fastboot mode
 > If you don't have access to fastboot, use the instructions in the [partitioning guide](1-partition.md) to flash the engineering ABL.
@@ -70,7 +70,7 @@ exit
 ```
 
 #### Formatting Windows
-> Go to Windows Explorer > This PC and select **WINFLASH**. Right click and format as NTFS.
+> Go to Windows Explorer > This PC and select **WINMH2LM5G**. Right click and format as NTFS.
 
 ### Installing Windows
 > Replace `<path\to\install.esd>` with the actual path of install.esd (it may also be named install.wim)
@@ -84,7 +84,7 @@ dism /apply-image /ImageFile:<path\to\install.esd> /index:6 /ApplyDir:X:\
 ### Installing Drivers
 > Unpack the driver archive, then open the `OfflineUpdater.cmd` file
 
-> Enter the drive letter of **WINFLASH**, which should be X, then press enter
+> Enter the drive letter of **WINMH2LM5G**, which should be X, then press enter
 
 ### Boot into Windows
 Reboot your phone. If you end up in Android instead of Windows, flash the UEFI again using WOA Helper.
