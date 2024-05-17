@@ -1,15 +1,15 @@
-<img align="right" src="https://github.com/n00b69/woa-flashlmdd/blob/main/flashlmdd.png" width="350" alt="Windows 11 running on flashlmdd">
+<img align="right" src="https://github.com/n00b69/woa-mh2lm5g/blob/main/mh2lm5g.png" width="350" alt="Windows 11 running on mh2lm5g">
 
-# Running Windows on the LG V50
+# Running Windows on the LG V50S
 
 ## Installing Windows
 
 ### Prerequisites
 - [Windows on ARM image](https://worproject.com/esd)
   
-- [Drivers](https://github.com/n00b69/woa-flashlmdd/releases/tag/Drivers)
+- [Drivers](https://github.com/n00b69/woa-mh2lm5g/releases/tag/Drivers)
 
-- [Mass storage image](https://github.com/n00b69/woa-flashlmdd/releases/download/Files/msc.img)
+- [Mass storage image](https://github.com/n00b69/woa-mh2lm5g/releases/download/Files/msc.img)
 
 ### Reboot to fastboot mode
 - With the device turned off, hold the **volume down** button, then plug the cable in.
@@ -62,7 +62,7 @@ sel par $
 
 #### Formatting Windows drive
 ```cmd
-format quick fs=ntfs label="WINFLASH"
+format quick fs=ntfs label="WINMH2LM5G"
 ```
 
 #### Add letter to Windows
@@ -78,7 +78,7 @@ sel par $
 
 #### Formatting ESP drive
 ```cmd
-format quick fs=fat32 label="ESPFLASH"
+format quick fs=fat32 label="ESPMH2LM5G"
 ```
 
 #### Add letter to ESP
@@ -103,7 +103,7 @@ dism /apply-image /ImageFile:<path\to\install.esd> /index:6 /ApplyDir:X:\
 ### Installing drivers
 > Unpack the driver archive, then open the `OfflineUpdater.cmd` file
 
-> Enter the drive letter of `WINFLASH`, which should be **X**, then press enter
+> Enter the drive letter of `WINMH2LM5G`, which should be **X**, then press enter
   
 #### Create the Windows bootloader files
 ```cmd
