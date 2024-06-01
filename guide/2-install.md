@@ -9,23 +9,19 @@
   
 - [Drivers](https://github.com/n00b69/woa-mh2lm5g/releases/tag/Drivers)
 
-- [Mass storage image](https://github.com/n00b69/woa-mh2lm5g/releases/download/Files/msc.img)
+- [Mass storage image](https://github.com/n00b69/woa-mh2lm5g/releases/download/Files/massstorage.img)
 
 ### Reboot to fastboot mode
 - With the device turned off, hold the **volume down** button, then plug the cable in.
 - If the phone in device manager is called **Android** and has a ⚠️ yellow warning triangle, you need to install fastboot drivers before you can continue.
 
-#### Boot to the mass storage mode UEFI
-> Replace **<path\to\msc.img>** with the actual path of the image
+#### Boot to the mass storage mode image
+> Replace **path\to\massstorage.img** with the actual path of the image
+>
+> If popups show up telling you to format the disks, ignore or close them
 ```cmd
-fastboot boot <path\to\msc.img>
+fastboot boot path\to\massstorage.img
 ```
-
-#### Enabling mass storage mode
-> Once booted into the UEFI, use the volume buttons to navigate the menu and the power button to confirm
-- Select **UEFI Boot Menu**.
-- Select **USB Attached SCSI (UAS) Storage**.
-- Press the **power** button twice to confirm.
 
 ### Diskpart
 > [!WARNING]
@@ -67,7 +63,7 @@ format quick fs=ntfs label="WINMH2LM5G"
 
 #### Add letter to Windows
 ```cmd
-assign letter x
+assign letter a
 ```
 
 #### Selecting the ESP partition
@@ -83,7 +79,7 @@ format quick fs=fat32 label="ESPMH2LM5G"
 
 #### Add letter to ESP
 ```cmd
-assign letter y
+assign letter b
 ```
 
 #### Exit diskpart
@@ -95,7 +91,7 @@ exit
 > Replace `<path\to\install.esd>` with the actual path of install.esd (it may also be named install.wim)
 
 ```cmd
-dism /apply-image /ImageFile:<path\to\install.esd> /index:6 /ApplyDir:X:\
+dism /apply-image /ImageFile:<path\to\install.esd> /index:6 /ApplyDir:A:\
 ```
 
 > If you get `Error 87`, check the index of your image with `dism /get-imageinfo /ImageFile:<path\to\install.esd>`, then replace `index:6` with the actual index number of Windows 11 Pro in your image
@@ -107,22 +103,22 @@ dism /apply-image /ImageFile:<path\to\install.esd> /index:6 /ApplyDir:X:\
   
 #### Create the Windows bootloader files
 ```cmd
-bcdboot X:\Windows /s Y: /f UEFI
+bcdboot A:\Windows /s B: /f UEFI
 ```
 
 #### Enabling test signing
 ```cmd
-bcdedit /store Y:\EFI\Microsoft\BOOT\BCD /set "{default}" testsigning on
+bcdedit /store B:\EFI\Microsoft\BOOT\BCD /set "{default}" testsigning on
 ```
 
 #### Disabling recovery
 ```cmd
-bcdedit /store Y:\EFI\Microsoft\BOOT\BCD /set "{default}" recoveryenabled no
+bcdedit /store B:\EFI\Microsoft\BOOT\BCD /set "{default}" recoveryenabled no
 ```
 
 #### Disabling integrity checks
 ```cmd
-bcdedit /store Y:\EFI\Microsoft\BOOT\BCD /set "{default}" nointegritychecks on
+bcdedit /store B:\EFI\Microsoft\BOOT\BCD /set "{default}" nointegritychecks on
 ```
 
 ### Reboot to EDL
