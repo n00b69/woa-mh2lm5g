@@ -102,7 +102,7 @@ dism /apply-image /ImageFile:<path\to\install.esd> /index:6 /ApplyDir:A:\
 ### Installing drivers
 > Unpack the driver archive, then open the `OfflineUpdater.cmd` file
 
-> Enter the drive letter of `WINMH2LM5G`, which should be **X**, then press enter
+> Enter the drive letter of `WINMH2LM5G`, which should be **A**, then press enter
   
 #### Create the Windows bootloader files
 ```cmd
