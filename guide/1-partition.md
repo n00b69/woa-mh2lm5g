@@ -113,15 +113,15 @@ mkpart esp fat32 60GB 60.3GB
 #### Creating Windows partition
 > Replace **60.3GB** with the end value of **esp**
 >
-> Replace **126GB** with the end value of your disk, use `p free` to find it
+> Replace **254GB** with the end value of your disk, use `p free` to find it
 ```cmd
-mkpart win ntfs 60.3GB 126GB
+mkpart win ntfs 60.3GB 254GB
 ```
 
-#### Making ESP bootable
+#### Making ESP usable
 > Use `print` to see all partitions. Replace "$" with your ESP partition number, which should be 31
 ```cmd
-set $ esp on
+set $ msftdata on
 ```
 
 #### Exit parted
