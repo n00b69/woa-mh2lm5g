@@ -97,7 +97,7 @@ rm $
 #### Recreating userdata
 > Replace **17.7GB** with the former start value of **userdata** which we just deleted
 >
-> Replace **60GB** with the end value you want **userdata** to have
+> Replace **60GB** with the end value you want **userdata** to have. In this example Android will have 60GB-17.7GB= **42.3GB** of usable space.
 ```cmd
 mkpart userdata ext4 17.7GB 60GB
 ```
