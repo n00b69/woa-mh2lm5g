@@ -13,6 +13,8 @@
 
 - [Qfil](https://github.com/n00b69/woa-mh2lm5g/releases/tag/Qfil)
 
+- [Parted script](https://github.com/n00b69/woa-mh2lm5g/releases/download/Files/parted)
+
 ### Reboot to fastboot mode
 - With the device turned off, hold the **volume down** button, then plug the cable in.
 - If the phone in device manager is called **Android** and has a ⚠️ yellow warning triangle, you need to install fastboot drivers before you can continue.
@@ -36,7 +38,7 @@ diskpart
 #### Finding your phone
 > This will list all connected disks
 >
-> Look for your phone (which should be the last disk which will be 117GB in size). If you do not see it, wait a few seconds and run the command again. Repeat this until you see the disk.
+> Look for your phone (which should be the last disk which will be 236GB). If you do not see it, wait a few seconds and run the command again. Repeat this until you see the disk.
 ```cmd
 lis dis
 ```
@@ -66,7 +68,7 @@ format quick fs=ntfs label="WINMH2LM5G"
 
 #### Add letter to Windows
 ```cmd
-assign letter a
+assign letter x
 ```
 
 #### Selecting the ESP partition
@@ -82,7 +84,7 @@ format quick fs=fat32 label="ESPMH2LM5G"
 
 #### Add letter to ESP
 ```cmd
-assign letter b
+assign letter y
 ```
 
 #### Exit diskpart
@@ -91,10 +93,10 @@ exit
 ```
 
 ### Installing Windows
-> Replace `<path\to\install.esd>` with the actual path of install.esd (it may also be named install.wim)
+> Replace `<path\to\install.esd>` with the actual path of **install.esd** (it may also be named install.wim)
 
 ```cmd
-dism /apply-image /ImageFile:<path\to\install.esd> /index:6 /ApplyDir:A:\
+dism /apply-image /ImageFile:<path\to\install.esd> /index:6 /ApplyDir:X:\
 ```
 
 > If you get `Error 87`, check the index of your image with `dism /get-imageinfo /ImageFile:<path\to\install.esd>`, then replace `index:6` with the actual index number of Windows 11 Pro in your image
@@ -102,26 +104,46 @@ dism /apply-image /ImageFile:<path\to\install.esd> /index:6 /ApplyDir:A:\
 ### Installing drivers
 > Unpack the driver archive, then open the `OfflineUpdater.cmd` file
 
-> Enter the drive letter of `WINMH2LM5G`, which should be **A**, then press enter
+> Enter the drive letter of `WINMH2LM5G`, which should be **X**, then press enter
   
 #### Create the Windows bootloader files
 ```cmd
-bcdboot A:\Windows /s B: /f UEFI
+bcdboot X:\Windows /s Y: /f UEFI
 ```
 
 #### Enabling test signing
 ```cmd
-bcdedit /store B:\EFI\Microsoft\BOOT\BCD /set "{default}" testsigning on
+bcdedit /store Y:\EFI\Microsoft\BOOT\BCD /set "{default}" testsigning on
 ```
 
 #### Disabling recovery
 ```cmd
-bcdedit /store B:\EFI\Microsoft\BOOT\BCD /set "{default}" recoveryenabled no
+bcdedit /store Y:\EFI\Microsoft\BOOT\BCD /set "{default}" recoveryenabled no
 ```
 
 #### Disabling integrity checks
 ```cmd
-bcdedit /store B:\EFI\Microsoft\BOOT\BCD /set "{default}" nointegritychecks on
+bcdedit /store Y:\EFI\Microsoft\BOOT\BCD /set "{default}" nointegritychecks on
+```
+
+### Boot into any custom recovery
+> Reboot your phone by holding **volume down** + **power** until it shows the LG logo, then release the buttons. After this boot to any custom recovery again.
+
+#### Push parted
+> Download the parted file and move it in the platform-tools folder, then run
+```cmd
+adb push parted /cache/ && adb shell "chmod 755 /cache/parted" && adb shell /cache/parted /dev/block/sda
+```
+
+#### Making ESP bootable
+> Use `print` to see all partitions. Replace "$" with your ESP partition number, which should be 31
+```cmd
+set $ esp on
+```
+
+#### Exit parted
+```cmd
+quit
 ```
 
 ### Reboot to EDL
