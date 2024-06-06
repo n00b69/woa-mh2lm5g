@@ -11,9 +11,7 @@
 
 - [Mass storage image](https://github.com/n00b69/woa-mh2lm5g/releases/download/Files/massstorage.img)
 
-- [Qfil](https://github.com/n00b69/woa-mh2lm5g/releases/tag/Qfil)
-
-- [Parted script](https://github.com/n00b69/woa-mh2lm5g/releases/download/Files/parted)
+- [UEFI image](https://github.com/n00b69/woa-mh2lm5g/releases/tag/UEFI)
 
 ### Reboot to fastboot mode
 - With the device turned off, hold the **volume down** button, then plug the cable in.
@@ -130,7 +128,7 @@ bcdedit /store Y:\EFI\Microsoft\BOOT\BCD /set "{default}" nointegritychecks on
 > Reboot your phone by holding **volume down** + **power** until it shows the LG logo, then release the buttons. After this boot to any custom recovery again.
 
 #### Push parted
-> Download the parted file and move it in the platform-tools folder, then run
+> Make sure your CMD is opened in platform-tools
 ```cmd
 adb push parted /cache/ && adb shell "chmod 755 /cache/parted" && adb shell /cache/parted /dev/block/sda
 ```
@@ -145,6 +143,29 @@ set $ esp on
 ```cmd
 quit
 ```
+
+### Reboot to fastboot mode
+> If the command does not work, manually reboot to fastboot mode by powering off the phone with the cable unplugged, then hold the **volume down** button while plugging the cable back in
+```cmd
+adb reboot bootloader
+```
+
+### Setting up Windows
+> Replace **path\to\mh2lm5-uefi.img** with the actual path of the image
+```cmd
+fastboot boot path\to\mh2lm5-uefi.img
+```
+
+#### Booting back into mass storage mode
+> After around 15 minutes, Windows will reboot by itself. When it does, boot back into fastboot mode and boot the mass storage image again.
+```cmd
+fastboot boot path\to\massstorage.img
+```
+
+### Reinstalling drivers
+> Wait until it automatically detects **WINMH2LM5G**, then reopen `OfflineUpdater.cmd` in the driver archive.
+>
+> This process will take much longer than the first time.
 
 ### Reboot to EDL
 > If you didn't flash the engineering ABL on the previous page, you can skip this step and the next one and simply reboot your device
