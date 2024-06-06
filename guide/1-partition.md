@@ -68,7 +68,7 @@
 #### Reboot your phone
 > Hold **volume down** + **power** until it shows the LG logo, then release the buttons.
 
-#### Boot into any custom recovery
+### Boot into any custom recovery
 > Such as Lineage recovery, OFOX, or TWRP, which should be accessible by holding the **volume up** + **power** buttons, or with the Reboot to recovery button in Magisk
 
 #### Unmount all partitions
