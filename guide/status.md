@@ -12,7 +12,7 @@ There are currently issues with restarting/shutting down the device while in Win
 - [x] Brightness
 - [ ] Camera
 - [x] Charging (USB) ```VERY slow```
-- [ ] Charging (Wireless) ```unknown```
+- [x] Charging (Wireless)
 - [x] Display
 - [x] GPU
 - [ ] LTE/SMS
