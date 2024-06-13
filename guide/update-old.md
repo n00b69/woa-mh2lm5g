@@ -41,9 +41,9 @@
 - If the phone in device manager is called **Android** and has a ⚠️ yellow warning triangle, you need to install fastboot drivers before you can continue.
 
 #### Boot to the mass storage mode UEFI
-> Replace **<path\to\msc.img>** with the actual path of the image
+> Replace `path\to\msc.img` with the actual path of the image
 ```cmd
-fastboot boot <path\to\msc.img>
+fastboot boot path\to\msc.img
 ```
 
 #### Enabling mass storage mode
@@ -58,9 +58,9 @@ diskpart
 ```
 
 #### Select the phone's Windows volume
-> Use `list volume` to find it, it should be named **WINMH2LM5G**
+> Use `list volume` to find it, replace `$` with the actual number of **WINMH2LM5G**
 ```diskpart
-select volume <number>
+select volume $
 ```
 
 #### Assign the letter x
@@ -68,15 +68,15 @@ select volume <number>
 assign letter x
 ```
 
-#### Exit diskpart:
+#### Exit diskpart
 ```diskpart
 exit
 ```
 
 ### Installing Drivers
-> Unpack the driver archive, then open the `OfflineUpdater.cmd` file
+> Unpack the driver archive, then open the `OfflineUpdater.cmd` file (if an error shows up, run `OfflineUpdaterFix.cmd` instead)
 
-> Enter the drive letter of `WINMH2LM5G`, which should be X, then press enter
+> If it asks you to enter a letter, enter the drive letter of **WINMH2LM5G** (which should be **X**), then press enter
 
 ### Reboot back to edl
 > To restore your original abl
