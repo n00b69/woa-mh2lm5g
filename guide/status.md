@@ -17,7 +17,7 @@ There are currently issues with restarting/shutting down the device while in Win
 - [x] Display
 - [x] GPU
 - [ ] LTE/SMS
-- [x] SD
+- [x] SD Card
 - [x] Touchscreen
 - [x] UFS
 - [x] USB ```doesn't work after charging```
