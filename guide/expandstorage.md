@@ -3,7 +3,7 @@
 # Running Windows on the LG V50S
 
 ## Expanding your phone's storage
-> Due to LG bullshit, this phone only comes with a 128GB option and forced A/B partitions, which take up precious space. This guide will explain to you how you can delete the B partitions of your phone, to get back 8-10GB of extra space.
+> Due to LG bullshit, this phone comes with forced A/B partitions, which take up precious space. This guide will explain to you how you can delete the B partitions of your phone, to get back 8-10GB of extra space.
 
 ### Prerequisites
 - [ADB & Fastboot](https://developer.android.com/studio/releases/platform-tools)
