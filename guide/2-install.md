@@ -42,7 +42,7 @@ lis dis
 ```
 
 #### Selecting your phone
-> Replace $ with the actual number of your phone
+> Replace `$` with the actual number of your phone
 ```cmd
 sel dis $
 ```
@@ -54,7 +54,7 @@ lis par
 ```
 
 #### Selecting the Windows partition
-> Replace $ with the partition number of Windows (should be 32)
+> Replace `$` with the partition number of Windows (should be 32)
 ```cmd
 sel par $
 ```
@@ -70,7 +70,7 @@ assign letter x
 ```
 
 #### Selecting the ESP partition
-> Replace $ with the partition number of ESP (should be 31)
+> Replace `$` with the partition number of ESP (should be 31)
 ```cmd
 sel par $
 ```
