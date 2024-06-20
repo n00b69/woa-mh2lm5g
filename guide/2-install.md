@@ -11,8 +11,6 @@
 
 - [Mass storage image](https://github.com/n00b69/woa-mh2lm5g/releases/download/Files/massstorage.img)
 
-- [UEFI image](https://github.com/n00b69/woa-mh2lm5g/releases/tag/UEFI)
-
 ### Reboot to fastboot mode
 - With the device turned off, hold the **volume down** button, then plug the cable in.
 - If the phone in device manager is called **Android** and has a ⚠️ yellow warning triangle, you need to install fastboot drivers before you can continue.
@@ -146,29 +144,6 @@ set $ esp on
 ```cmd
 quit
 ```
-
-### Reboot to fastboot mode
-> If the command does not work, manually reboot to fastboot mode by powering off the phone with the cable unplugged, then hold the **volume down** button while plugging the cable back in
-```cmd
-adb reboot bootloader
-```
-
-### Setting up Windows
-> Replace **path\to\mh2lm5-uefi.img** with the actual path of the image
-```cmd
-fastboot boot path\to\mh2lm5-uefi.img
-```
-
-#### Booting back into mass storage mode
-> After around 15 minutes, Windows will reboot by itself. When it does, boot back into fastboot mode and boot the mass storage image again.
-```cmd
-fastboot boot path\to\massstorage.img
-```
-
-### Reinstalling drivers
-> Wait until it automatically detects **WINMH2LM5G**, then reopen `OfflineUpdater.cmd` in the driver archive.
->
-> This process will take much longer than the first time.
 
 ### Reboot to EDL
 > If you didn't flash the engineering ABL on the previous page, you can skip this step and the next one and simply reboot your device
