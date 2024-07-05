@@ -24,12 +24,14 @@ Most thing work. This project is in a late stage of refining the last few things
 - [x] WiFi
 
 #### Sensors
-- [ ] Accelerometer
+- [x] Accelerometer
+- [x] Compass
 - [ ] Fingerprint
 - [x] GPS
 - [x] Gyroscope
-- [ ] Light sensor
-- [ ] Magnetometer
+- [x] Inclinometer
+- [x] Light sensor
+- [x] Magnetometer
 - [ ] Proximity
 
 
