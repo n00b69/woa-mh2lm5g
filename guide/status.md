@@ -3,7 +3,7 @@
 # Running Windows on the LG V50S
 
 ## Project status
-There are currently issues with restarting/shutting down the device while in Windows, requiring you to force reboot using the power + volume down button. This will hopefully be fixed soon.
+Most thing work. This project is in a late stage of refining the last few things.
 
 #### Features
 - [x] Audio (Speakers)
@@ -27,7 +27,7 @@ There are currently issues with restarting/shutting down the device while in Win
 - [ ] Accelerometer
 - [ ] Fingerprint
 - [x] GPS
-- [ ] Gyroscope
+- [x] Gyroscope
 - [ ] Light sensor
 - [ ] Magnetometer
 - [ ] Proximity
