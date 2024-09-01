@@ -2,7 +2,7 @@
 
 # Running Windows on the LG V50S
 
-## Dualbooting Android and Windows seamlessly
+## Dualboot guide
 
 ### Prerequisites
 - [UEFI image](https://github.com/n00b69/woa-mh2lm5g/releases/tag/UEFI)
@@ -16,6 +16,10 @@
 - Download and install the **WOA Helper** app, then open it and grant it root access.
 - Download the **UEFI image** and place it inside the folder named `UEFI` in your internal storage.
 - Close and repen the WOA Helper app and press the **QUICKBOOT TO WINDOWS** button.
+
+### Setup - Windows
+> [!Tip]
+> If this is your first time booting Windows and you wish to skip the Microsoft Account login, press the **I don't have internet** button in the WiFi page, then when prompted, press the **Continue with limited setup** button.
 
 #### Booting to Android
 - Run the new **Android** shortcut on your desktop (you can also pin it to your start menu / taskbar for ease of access)
