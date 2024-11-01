@@ -7,7 +7,7 @@
 ### Prerequisites
 - [ADB & Fastboot](https://developer.android.com/studio/releases/platform-tools)
 
-- [Modded TWRP](https://github.com/n00b69/woa-mh2lm/releases/download/Recoveries/Modded-twrp-g8x.img)
+- [Modded TWRP](https://github.com/n00b69/woa-mh2lm5g/releases/download/Files/Modded-twrp-g8x.img)
 
 ### Reboot into fastboot mode
 > If you don't have access to fastboot, use the instructions in the [partitioning guide](1-partition.md) to flash the engineering ABL.
