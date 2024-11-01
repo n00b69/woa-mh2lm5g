@@ -15,8 +15,6 @@
 
 ### Reboot into fastboot mode
 - With the device turned off, hold the **volume down** button, then plug the cable in.
-- If the phone in device manager is called **Android** and has a ⚠️ yellow warning triangle, you need to install fastboot drivers before you can continue.
-- To install fastboot drivers, extract the contents of **QUD.zip** somewhere, right click on **Android**, click on **Update driver** and **Browse my computer for drivers**, then find and select the **QUD** folder.
 
 #### Boot into the mass storage mode image
 > Replace `path\to\massstorage.img` with the actual path of the image
@@ -101,13 +99,28 @@ bcdedit /store Y:\EFI\Microsoft\BOOT\BCD /set "{default}" recoveryenabled no
 bcdedit /store Y:\EFI\Microsoft\BOOT\BCD /set "{default}" nointegritychecks on
 ```
 
-### Boot into any custom recovery
-> Reboot your phone by holding **volume down** + **power** until it shows the LG logo, then release the buttons. After this boot to any custom recovery again.
-
-#### Push parted
-> Make sure your CMD is opened in platform-tools
+#### Remove the drive letter for ESP
+> If this does not work, ignore it and skip to the next command. This phantom drive will disappear the next time you reboot your PC.
 ```cmd
-adb push parted /cache/ && adb shell "chmod 755 /cache/parted" && adb shell /cache/parted /dev/block/sda
+mountvol y: /d
+```
+
+#### Reboot to fastboot mode
+- Reboot your phone by holding **volume down** + **power** until it shows the LG logo, then release the buttons.
+- After it has booted, unplug the cable and power it off.
+- Once the device has turned off, hold the **volume down** button, then plug the cable back in.
+
+#### Boot into the modded TWRP
+> Replace `path\to\modded-twrp-g8x.img` with the actual path of the provided TWRP image
+>
+> After booting into TWRP, leave the device on the main screen. You can press the power button to turn the display off, if you want
+```cmd
+fastboot boot path\to\modded-twrp-g8x.img
+```
+
+### Running parted
+```cmd
+adb shell parted /dev/block/sda
 ```
 
 #### Making ESP bootable
