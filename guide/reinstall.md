@@ -13,6 +13,16 @@
 > If you don't have access to fastboot, use the instructions in the [partitioning guide](1-partition.md) to flash the engineering ABL.
 - With the device turned off, hold the **volume down** button, then plug the cable in.
 
+### Opening CMD as an admin
+> Download **platform-tools** and extract the folder somewhere, then open CMD as an **administrator**.
+>
+> It is recommended to keep this window open and use it throughout the entire guide.
+> 
+> Replace `path\to\platform-tools` with the actual path to the platform-tools folder, for example **C:\platform-tools**.
+```cmd
+cd path\to\platform-tools
+```
+
 #### Boot into the modded TWRP
 > Replace `path\to\modded-twrp-g8x.img` with the actual path of the provided TWRP image
 >
