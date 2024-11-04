@@ -38,6 +38,7 @@ select volume $
 ```
 
 #### Assign the letter X
+> If letter `X` cannot be assigned, use letter `A` instead, and replace the letter `X` in future commands with the letter `A`
 ```diskpart
 assign letter x
 ```
@@ -49,6 +50,7 @@ select volume $
 ```
 
 #### Assign the letter Y
+> If letter `Y` cannot be assigned, use letter `B` instead, and replace the letter `Y` in future commands with the letter `B`
 ```diskpart
 assign letter y
 ```
@@ -80,6 +82,8 @@ dism /apply-image /ImageFile:path\to\install.esd /index:6 /ApplyDir:X:\
   
 #### Create the Windows bootloader files
 > If any error shows up, such as "Failure when attempting to copy boot files", open `diskpart` again and assign any new letter to **ESPMH2LM5G**, then replace the letter `Y` in the next commands with the letter that you just added.
+>
+> Reboot your PC if no letters are available to be assigned.
 ```cmd
 bcdboot X:\Windows /s Y: /f UEFI
 ```
