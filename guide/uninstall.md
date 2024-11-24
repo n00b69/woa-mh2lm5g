@@ -7,7 +7,7 @@
 ### Prerequisites
 - [ADB & Fastboot](https://developer.android.com/studio/releases/platform-tools) 
   
-- [Modded TWRP](https://github.com/n00b69/woa-mh2lm5g/releases/download/Files/Modded-twrp-g8x.img) 
+- [Modded TWRP](https://github.com/n00b69/woa-mh2lm5g/releases/download/Files/modded-twrp-g8x.img) 
 
 ### Notes
 > [!WARNING]
@@ -33,7 +33,7 @@ cd path\to\platform-tools
 ``` 
 
 #### Boot into the modded TWRP
-> Replace `path\to\modded-twrp-g8s.img` with the actual path of the provided TWRP image
+> Replace `path\to\modded-twrp-g8x.img` with the actual path of the provided TWRP image
 >
 > After booting into TWRP, leave the device on the main screen. You can press the power button to turn the display off, if you want
 ```cmd
