@@ -1,4 +1,4 @@
-<img align="right" src="https://github.com/n00b69/woa-mh2lm5g5g/blob/main/mh2lm5g5g.png" width="350" alt="Windows 11 running on mh2lm5g5g">
+<img align="right" src="https://github.com/n00b69/woa-mh2lm5g/blob/main/mh2lm5g5g.png" width="350" alt="Windows 11 running on mh2lm5g">
 
 # Running Windows on the LG V50S
 
@@ -15,7 +15,7 @@
 
 - [Windows on ARM image](https://arkt-7.github.io/woawin/)
 
-- [WOA Helper app](https://github.com/Marius586/WoA-Helper-update/releases/tag/WOA)
+- [WOA Helper app](https://github.com/n00b69/woa-helper/releases/tag/APK)
 
 ### Notes
 > [!WARNING]  
