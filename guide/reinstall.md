@@ -33,11 +33,7 @@ fastboot boot path\to\modded-twrp-g8x.img
 
 ### Formatting Windows and ESP partitions
 ```cmd
-adb shell mkfs.ntfs -f /dev/block/by-name/win -L WINMH2LM5G
-```
-
-```cmd
-adb shell mkfs.fat -F32 -s1 /dev/block/by-name/esp -n ESPMH2LM5G
+adb shell format
 ```
 
 ## [Next step: Reinstalling Windows](3-install.md)
