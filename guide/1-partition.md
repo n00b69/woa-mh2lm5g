@@ -116,7 +116,7 @@ adb shell parted /dev/block/sda
 ```
 
 #### Printing the current partition table
-> This will print a list of partitions on your phone
+> Parted will print the list of partitions, **userdata** or **grow** should be the last partition in the list
 ```cmd
 print
 ```
