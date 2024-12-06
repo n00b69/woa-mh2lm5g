@@ -14,7 +14,7 @@
 
 - [Engineering ABL](https://github.com/n00b69/woa-mh2lm5g/releases/download/Files/engabl_ab.bin)
   
-- [Modded TWRP](https://github.com/n00b69/woa-mh2lm5g/releases/download/Files/Modded-twrp-g8x.img)
+- [Modded TWRP](https://github.com/n00b69/woa-mh2lm5g/releases/download/Files/modded-twrp-g8x.img)
 
 ### Notes
 > [!WARNING]
@@ -80,12 +80,14 @@ fastboot boot path\to\modded-twrp-g8x.img
 ```
 
 #### Unmount data
+> Ignore any possible errors and continue
+>
+> Replug the cable if it says "no devices/emulators found"
 ```cmd
 adb shell umount /dev/block/by-name/userdata
 ```
 
 ### Preparing for partitioning
-> Replug the cable if it says "no devices/emulators found"
 ```cmd
 adb shell parted /dev/block/sda
 ```
