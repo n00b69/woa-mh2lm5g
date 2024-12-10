@@ -79,23 +79,23 @@ rm $
 #### Recreating userdata
 > Replace **17.7GB** with the former start value of **userdata** which we just deleted
 >
-> Replace **64GB** with the end value you want **userdata** to have. In this example your available usable space in Android will be 64GB-17.7GB = **47GB**
+> Replace **150GB** with the end value you want **userdata** to have. In this example your available usable space in Android will be 150GB-17.7GB = **132GB**
 ```cmd
-mkpart userdata ext4 17.7GB 64GB
+mkpart userdata ext4 17.7GB 150GB
 ```
 
 #### Creating ESP partition
-> Replace **64GB** with the end value of **userdata**
+> Replace **150GB** with the end value of **userdata**
 >
-> Replace **64.35GB** with the value you used before, adding **0.35GB** to it
+> Replace **150.35GB** with the value you used before, adding **0.35GB** to it
 ```cmd
-mkpart esp fat32 64GB 64.35GB
+mkpart esp fat32 150GB 150.35GB
 ```
 
 #### Creating Windows partition
-> Replace **64.35GB** with the end value of **esp**
+> Replace **150.35GB** with the end value of **esp**
 ```cmd
-mkpart win ntfs 64.35GB 254GB
+mkpart win ntfs 150.35GB 254GB
 ```
 
 #### Making ESP bootable
