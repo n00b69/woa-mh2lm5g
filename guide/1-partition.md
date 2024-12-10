@@ -151,10 +151,10 @@ mkpart esp fat32 150GB 150.3GB
 mkpart win ntfs 150.3GB 254GB
 ```
 
-#### Making ESP usable
+#### Making ESP bootable
 > Use `print` to see all partitions. Replace "$" with your ESP partition number, which should be 31
 ```cmd
-set $ msftdata on
+set $ esp on
 ```
 
 #### Exit parted
