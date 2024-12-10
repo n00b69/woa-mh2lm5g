@@ -115,35 +115,6 @@ bcdedit /store Y:\EFI\Microsoft\BOOT\BCD /set "{default}" nointegritychecks on
 mountvol y: /d
 ```
 
-#### Reboot into fastboot mode
-- Reboot your phone by holding **volume down** + **power** until it shows the LG logo, then release the buttons.
-- After it has booted, unplug the cable and power it off.
-- Once the device has turned off, hold the **volume down** button, then plug the cable back in.
-
-#### Boot into the modded TWRP
-> Replace `path\to\modded-twrp-g8x.img` with the actual path of the provided TWRP image
->
-> After booting into TWRP, leave the device on the main screen. You can press the power button to turn the display off, if you want
-```cmd
-fastboot boot path\to\modded-twrp-g8x.img
-```
-
-### Running parted
-```cmd
-adb shell parted /dev/block/sda
-```
-
-#### Making ESP bootable
-> Use `print` to see all partitions. Replace "$" with your ESP partition number, which should be 31
-```cmd
-set $ esp on
-```
-
-#### Exit parted
-```cmd
-quit
-```
-
 ### Rebooting into fastboot mode
 ```cmd
 adb reboot bootloader
