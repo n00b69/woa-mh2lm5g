@@ -20,6 +20,7 @@ Most thing work. This project is in a late stage of refining the last few things
 - [ ] Flashlight
 - [x] GPU ```graphics in portrait may appear corrupted```
 - [ ] LTE/SMS
+- [x] Microphone
 - [x] SD card
 - [x] Touchscreen
 - [x] UFS
