@@ -15,12 +15,15 @@ Most thing work. This project is in a late stage of refining the last few things
 - [x] Charging (USB) ```VERY slow```
 - [x] Charging (Wireless)
 - [x] Display
-- [x] GPU
+- [ ] DisplayPort ```will likely never work```
+- [ ] Dualscreen ```will likely never work```
+- [ ] Flashlight
+- [x] GPU ```graphics in portrait may appear corrupted```
 - [ ] LTE/SMS
-- [x] SD Card
+- [x] SD card
 - [x] Touchscreen
 - [x] UFS
-- [x] USB ```doesn't work after charging```
+- [x] USB
 - [x] WiFi
 
 #### Sensors
