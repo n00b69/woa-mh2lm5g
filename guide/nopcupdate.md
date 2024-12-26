@@ -7,7 +7,7 @@
 ### Prerequisites
 - A rooted LG V50S with LineageOS 20 or an SD card
 
-- [LG G8x WinInstaller](https://github.com/n00b69/woa-mh2lm5g/releases/download/Files/Mh2lm5gWinInstaller.zip)
+- [LG V50S WinInstaller](https://github.com/n00b69/woa-mh2lm5g/releases/download/Files/Mh2lm5gWinInstaller.zip)
 
 - [Modified TWRP](https://github.com/n00b69/woa-mh2lm5g/releases/download/Files/modded-twrp-g8x-installer.zip)
 
