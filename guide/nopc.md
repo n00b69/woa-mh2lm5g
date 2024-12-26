@@ -11,7 +11,7 @@
 
 - [Modified TWRP](https://github.com/n00b69/woa-mh2lm5g/releases/download/Files/modded-twrp-g8x-installer.zip)
 
-- [LG G8x WinInstaller](https://github.com/n00b69/woa-mh2lm5g/releases/download/Files/Mh2lm5gWinInstaller.zip)
+- [LG V50S WinInstaller](https://github.com/n00b69/woa-mh2lm5g/releases/download/Files/Mh2lm5gWinInstaller.zip)
 
 - [Windows on ARM image](https://arkt-7.github.io/woawin/)
 
