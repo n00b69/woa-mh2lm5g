@@ -1,4 +1,4 @@
-<img align="right" src="https://github.com/n00b69/woa-mh2lm5g/blob/main/mh2lm5g.png" width="350" alt="Windows 11 running on mh2lm5g">
+u<img align="right" src="https://github.com/n00b69/woa-mh2lm5g/blob/main/mh2lm5g.png" width="350" alt="Windows 11 running on mh2lm5g">
 
 # Running Windows on the LG V50S
 
@@ -169,10 +169,7 @@ quit
 ### Formatting win and esp partitions
 > After rebooting back into TWRP
 ```cmd
-adb shell mkfs.ntfs -f /dev/block/by-name/win -L WINMH2LM5G
-```
-```cmd
-adb shell mkfs.fat -F32 -s1 /dev/block/by-name/esp -n ESPMH2LM5G
+adb shell format
 ```
 
 ### Fixing the GPT
