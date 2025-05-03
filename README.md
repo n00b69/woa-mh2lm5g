@@ -1,7 +1,7 @@
 <img align="right" src="https://github.com/n00b69/woa-mh2lm5g/blob/main/mh2lm5g.png" width="350" alt="Windows 11 running on mh2lm5g">
 
 # Running Windows on the LG V50S
-[![telegram](https://img.shields.io/badge/chat-telegram-brightgreen.svg?logo=telegram&style=flat-square)](https://t.me/woahelperchat)
+[![telegram](https://img.shields.io/badge/chat-telegram-brightgreen.svg?logo=telegram&style=flat-square)](https://t.me/lgedevices)
 
 ## ⚠️ Warning
 We are not responsible for bricked devices, dead LG workers, dead microSD cards, dead pmics, dead ram, dead ics, dead cpus, any LG mischief, dead cats or dogs, nuclear wars or you getting fired because you forgot to reboot to Android for the alarm.
