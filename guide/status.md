@@ -15,8 +15,8 @@ Most thing work. This project is in a late stage of refining the last few things
 - [x] Charging (USB) ```VERY slow```
 - [x] Charging (Wireless)
 - [x] Display
-- [ ] DisplayPort ```will likely never work```
-- [ ] Dualscreen ```will likely never work```
+- [ ] DisplayPort
+- [ ] LG Dual Screen G8X ThinQ
 - [ ] Flashlight
 - [x] GPU ```graphics in portrait may appear corrupted```
 - [ ] LTE/SMS
@@ -25,6 +25,7 @@ Most thing work. This project is in a late stage of refining the last few things
 - [x] Touchscreen
 - [x] UFS
 - [x] USB
+- [ ] Vibration
 - [x] WiFi
 
 #### Sensors
