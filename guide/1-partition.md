@@ -162,24 +162,24 @@ set $ esp on
 quit
 ```
 
-### Format all data
-- Go to the Wipe menu in your recovery and wipe all data. If this doesn't work, simply reboot your phone.
-
-#### Reboot your phone
-> Once it is booted, it might tell you decryption was unsuccesful and it will ask you to erase all data.
-- Press this button to erase all data, then set up your phone (make sure to also enable USB debugging in developer settings), then reboot back into TWRP.
-
-### Formatting win and esp partitions
-> After rebooting back into TWRP
-```cmd
-adb shell format
-```
-
 ### Fixing the GPT
 > If you do not do this, Windows may break your device
 ```cmd
 adb shell fixgpt
 ```
+
+### Formatting win and esp partitions
+> This assumes that `win` has partition number **32** and `esp` has partition number **31**. If you are unsure, check again with `print` in `parted`.
+```cmd
+adb shell mkfs.ntfs -f /dev/block/sda32 -L WINMH2LM5G
+```
+```cmd
+adb shell mkfs.fat -F32 -s1 /dev/block/sda31 -n ESPMH2LM5G
+```
+
+### Format all data
+- Go to the Wipe menu in your recovery and wipe all data. If this doesn't work, simply reboot your phone.
+
 
 #### Reboot your phone
 > In preparation for the next step
