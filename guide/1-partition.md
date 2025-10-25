@@ -169,7 +169,9 @@ adb shell fixgpt
 ```
 
 ### Formatting win and esp partitions
-> This assumes that `win` has partition number **32** and `esp` has partition number **31**. If you are unsure, check again with `print` in `parted`.
+> This assumes that `win` has partition number **32** and `esp` has partition number **31**.
+> 
+> Make sure this matches your partition table by verifying it with the command `adb shell parted /dev/block/sda p`
 ```cmd
 adb shell mkfs.ntfs -f /dev/block/sda32 -L WINMH2LM5G
 ```
