@@ -31,9 +31,15 @@ cd path\to\platform-tools
 fastboot boot path\to\modded-twrp-g8x.img
 ```
 
-### Formatting Windows and ESP partitions
+### Formatting win and esp partitions
+> This assumes that `win` has partition number **32** and `esp` has partition number **31**.
+> 
+> Make sure this matches your partition table by verifying it with the command `adb shell parted /dev/block/sda p`
 ```cmd
-adb shell format
+adb shell mkfs.ntfs -f /dev/block/sda32 -L WINMH2LM5G
+```
+```cmd
+adb shell mkfs.fat -F32 -s1 /dev/block/sda31 -n ESPMH2LM5G
 ```
 
 ## [Next step: Reinstalling Windows](3-install.md)
